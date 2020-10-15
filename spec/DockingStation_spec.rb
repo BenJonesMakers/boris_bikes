@@ -1,10 +1,16 @@
-require 'bike_spec.rb'
-require 'Bike_spec.rb'
-require 'release_bike'
-describe DockingStation do 
+require 'DockingStation'
+require 'DockingStation.rb'
+
+
+docking_station = DockingStation.new
+RSpec.describe DockingStation do 
     it {is_expected.to respond_to :release_bike}
-end
-describe Bike do
-    it { is_expected.to respond_to :working? }
+    it 'releases working bikes' do
+    expect(bike).to be_working
+    
+describe '#release_bike' do
+    it {is_expected.to respond_to :release_bike}
 
     end
+
+end
